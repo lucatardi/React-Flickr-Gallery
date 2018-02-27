@@ -4,4 +4,4 @@
 /node_modules
 
 # API key
-config.js
+src/config.js
