@@ -92,7 +92,7 @@ class App extends Component {
       <div className="App">
         <div className="container">
           <div className="nav-menu-content">
-            <Route exact path="/" component={() => <Redirect to="/courses"/>} />
+            <Route exact path="/" component={() => <Redirect to="/search"/>} />
             <Route exact path="/search" render= { () => <SearchForm onSearch={this.callingAPI}/>} />
             <nav className="main-nav">
               <ul>
@@ -108,7 +108,7 @@ class App extends Component {
             <Route exact path="/search/dogs" render={() => <Dogs images={this.state.imageDogs} loaded={this.state.loaded}/>} />
             <Route exact path="/search/computers" render={() => <Computers images={this.state.imageComputers} loaded={this.state.loaded}/>} />
             <Route exact path='/404' component={My404Component} />
-            <Redirect from='*' to='/404' />
+            <Redirect from='/search/*' to='/404' />
           </Switch>
         </div>
       </div>
