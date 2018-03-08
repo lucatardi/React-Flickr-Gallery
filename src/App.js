@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import axios from "axios";
-import { BrowserRouter, Route, Switch, NavLink, Redirect} from "react-router-dom";
+import { HashRouter, BrowserRouter, Route, Switch, NavLink, Redirect} from "react-router-dom";
 
 import SearchForm from "./components/SearchForm";
 import ListPictures from "./components/ListPictures";
@@ -88,7 +88,7 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
       <div className="App">
         <div className="container">
           <div className="nav-menu-content">
@@ -112,7 +112,7 @@ class App extends Component {
           </Switch>
         </div>
       </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
